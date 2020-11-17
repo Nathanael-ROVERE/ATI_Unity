@@ -18,7 +18,7 @@ public class Balle : MonoBehaviour {
 
     // Fonctions
     void FixedUpdate(){
-        transform.Translate(deplacement * Time.deltaTime * speed); // pour que la balle se déplace et accélère
+        transform.Translate(deplacement * Time.deltaTime * speed); // pour que la balle se déplace
         GetComponent<Rigidbody>().velocity = deplacement;
     }
 
@@ -36,7 +36,7 @@ public class Balle : MonoBehaviour {
             }
             
             nbrBriques--;
-            speed += 0.02f;
+            speed += 0.02f; // on fait accélérer la balle à chaque collision avec une brique
 
             // fin de partie
             if (nbrBriques <= 0) {
