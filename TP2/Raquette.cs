@@ -19,5 +19,7 @@ public class Raquette : MonoBehaviour {
         Vector3 pos = transform.position;
         pos.x = Mathf.Clamp(pos.x, -clampX, clampX);
         transform.position = pos;
+
+        if (Input.GetKey("escape")) { Application.Quit(); }
     }
 }
